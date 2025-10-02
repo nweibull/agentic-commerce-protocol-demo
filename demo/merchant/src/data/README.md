@@ -1,0 +1,1 @@
+Dummy data sourced from https://dummyjson.com/docs/products.
