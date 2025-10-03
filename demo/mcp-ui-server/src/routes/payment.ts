@@ -78,6 +78,9 @@ export function setupPaymentRoutes(
         metadata: { source: 'mcp_checkout' }
       };
 
+      console.log(`[MCP] → POST /agentic_commerce/delegate_payment`);
+      console.log(`  └─ Creating payment token...`);
+
       const pspResponse = await fetch(`${PSP_URL}/agentic_commerce/delegate_payment`, {
         method: 'POST',
         headers: {

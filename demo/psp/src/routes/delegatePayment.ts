@@ -54,6 +54,10 @@ router.post('/agentic_commerce/delegate_payment', async (req: Request<{}, Delega
       request_id: requestId,
     });
 
+    // Log token creation
+    console.log(`[PSP] ← POST /agentic_commerce/delegate_payment`);
+    console.log(`  └─ Token created: ${vaultToken.id}`);
+
     const responseBody = {
       id: vaultToken.id,
       created: vaultToken.created,
