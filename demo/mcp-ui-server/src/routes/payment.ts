@@ -2,7 +2,7 @@ import { Express } from 'express';
 import { MerchantSessionService } from '../services/MerchantSessionService.js';
 import { Logger } from '../utils/logger.js';
 
-const MERCHANT_URL = process.env.MERCHANT_BASE_URL || 'http://localhost:3000';
+const MERCHANT_URL = process.env.MERCHANT_BASE_URL || 'http://localhost:4001';
 const PSP_URL = process.env.PSP_BASE_URL || 'http://localhost:4000';
 const MERCHANT_API_KEY = process.env.MERCHANT_API_KEY || 'test_api_key_123';
 const MERCHANT_API_VERSION = process.env.MERCHANT_API_VERSION || '2025-09-29';
